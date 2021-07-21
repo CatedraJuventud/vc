@@ -23,6 +23,7 @@
 > >
 > > [Exercise 1](/docs/workshops/path_tracing)
 > > [Exercise 2](/docs/workshops/worshop3/exercise2)
+> > [Conclusions](/docs/workshops/worshop3/conclusions)
 >
 > > :Collapse label=Algovis
 > >
