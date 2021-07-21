@@ -3,6 +3,10 @@ let lienzo1;
 let lienzo2;
 let contador=0;
 
+let maxFr=0;
+let frames=0;
+let i =0;
+
 function setup() {
   fingers = createVideo(['/vc/docs/sketches/fingers.mov', '/vc/docs/sketches/fingers.webm']);
   fingers.hide(); 
@@ -10,10 +14,25 @@ function setup() {
   lienzo1=createImage(320,240);
   lienzo2=createImage(320,240);
   fingers.loop();
-  frameRate(3); 
+  // frameRate(3);
+  frameRate(120);
+}
+
+function benchmark(f){
+  frames+=f;
+  maxFr=maxFr<f?f:maxFr;
+  i+=1;
+  if(i%100==0){
+    console.log("max"+maxFr);
+    console.log("avg:"+frames/i);
+    i=0;
+    frames=0;
+  }
 }
 
 function draw() {
+  let f=frameRate()
+  benchmark(f)
   background(0);
   fingers.loadPixels();
   

@@ -21,10 +21,8 @@
 > 
 > > :Collapse label=Rendering
 > >
-
 > > [Exercise 1](/docs/workshops/path_tracing)
 > > [Exercise 2](/docs/workshops/worshop3/exercise2)
-
 >
 > > :Collapse label=Algovis
 > >

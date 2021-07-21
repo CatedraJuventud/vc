@@ -2,6 +2,10 @@ let theShader;
 let fingers;
 let reproduce = false;
 
+let maxFr=0;
+let frames=0;
+let i =0;
+
 const Blur_Kernel= [ 0.11, 0.11, 0.11 ,0.11, 0.11, 0.11, 0.11, 0.11, 0.11]; 
 let Border_Detection= [ -1.0, -1.0, -1.0 , -1.0,  8.0, -1.0 , -1.0, -1.0, -1.0  ];
 const Emboss= [ 1,  1,  0, 1,  0, -1 , 0,  -1,  -1]; 
@@ -27,8 +31,26 @@ function setup() {
   button=createButton('Change Kernel!');
   button.position(300,350);
   button.mousePressed(changeMatrix);
+  frameRate(120);
 }
+
+function benchmark(f){
+  frames+=f;
+  maxFr=maxFr<f?f:maxFr;
+  i+=1;
+  if(i%100==0){
+    console.log("max"+maxFr);
+    console.log("avg:"+frames/i);
+    i=0;
+    frames=0;
+  }
+}
+
 function draw() {
+  
+let f=frameRate()
+benchmark(f)
+
   background(0);
   
   fingers.loop()
