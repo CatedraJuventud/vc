@@ -341,3 +341,11 @@ Below is an implementation of rasterization, which allows you to choose between 
 > >}
 
 
+## References
+
+ - [Rasterization](https://en.wikipedia.org/wiki/Rasterisation)
+ - [Ortographic Projection](https://en.wikipedia.org/wiki/Orthographic_projection)
+ - [Perspective Projection](https://en.wikipedia.org/wiki/3D_projection)
+ - [Spacial anti-alising](https://en.wikipedia.org/wiki/Spatial_anti-aliasing)
+
+
