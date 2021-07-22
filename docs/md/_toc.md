@@ -4,14 +4,26 @@
 > 
 > > :Collapse label=Imaging & Video
 > >
-> > [Exercise 1](/docs/workshops/w1_1)
-> > [Exercise 2](/docs/workshops/w1_2)
-> > [Exercise 3](/docs/workshops/w1_3)
-> > [Exercise 4](/docs/workshops/w1_4)
-> > [Conclusions](/docs/workshops/Conclusions)
->
+> > > :Collapse label=Sofware
+> > >
+> > > [Exercise 1](/docs/workshops/w1_1)
+> > > [Exercise 2](/docs/workshops/w1_2)
+> > > [Exercise 3](/docs/workshops/w1_3)
+> > > [Exercise 4](/docs/workshops/w1_4)
+> > > [Conclusions](/docs/workshops/Conclusions)
+> >
+> > > :Collapse label=Hardware
+> > >
+> > > [Exercise 1](/docs/workshops/worshop2/exercise1)
+> > > [Exercise 2](/docs/workshops/worshop2/exercise2)
+> > > [Exercise 3](/docs/workshops/worshop2/exercise3)
+> > > [Exercise 4](/docs/workshops/worshop2/exercise4)
+> 
 > > :Collapse label=Rendering
 > >
+> > [Exercise 1](/docs/workshops/path_tracing)
+> > [Exercise 2](/docs/workshops/worshop3/exercise2)
+> > [Conclusions](/docs/workshops/worshop3/conclusions)
 >
 > > :Collapse label=Algovis
 > >

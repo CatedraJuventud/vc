@@ -3,7 +3,7 @@
 let img_original, img_transformed;
 
 function preload() {
-  let location = '../sketches/workshop1/w3/lenna.png';
+  let location = '/vc/docs/sketches/lenna.png';
   img_original = loadImage(location);
   img_transformed = loadImage(location);
 }
