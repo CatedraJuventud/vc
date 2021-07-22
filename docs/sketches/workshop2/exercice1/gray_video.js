@@ -26,7 +26,7 @@ function setup() {
 }
 
 function draw() {
-
+  
   theShader.shader(grayShader);
   grayShader.setUniform('tex', video);
   texture(theShader);

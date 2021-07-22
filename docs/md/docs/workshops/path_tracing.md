@@ -1,5 +1,10 @@
 # Path Tracing
 
+## Problem Statement
+Perform a theoretical investigation of some visibility algorithm or global illumination method.
+
+## Background
+
 Path Tracing was the first general-purpose unbiased Monte Carlo light transport algorithm introduced by Kajiya in 1986 that is used in graphics. It is similar to ray tracing in which rays are cast from a virtual camera and traced through a simulated scene. the light rays are reduced by a BRDF (Bidirectional Reflectance Distribution Function) to define how much of it will go towards the camera. This step is repeated for each pixel in the final image.
 
 <p align="center">

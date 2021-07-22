@@ -20,7 +20,7 @@ function setup() {
   noStroke();
   shader(mosaic);
   mosaic.setUniform("image", myImage);
-  mosaic.setUniform("resolution", 1000);
+  mosaic.setUniform("resolution", 10000);
   mosaic.setUniform("WIDTH_PIXEL", WIDTH_PIXEL);
   mosaic.setUniform("NUM_IMAGES", NUM_IMAGES);
   mosaic.setUniform("HEIGHT_PIXEL", HEIGHT_PIXEL);
