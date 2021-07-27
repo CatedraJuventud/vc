@@ -18,11 +18,13 @@
 > > > [Exercise 2](/docs/workshops/worshop2/exercise2)
 > > > [Exercise 3](/docs/workshops/worshop2/exercise3)
 > > > [Exercise 4](/docs/workshops/worshop2/exercise4)
+> > > [Conclusions](/docs/workshops/conclusionsw2)
 > 
 > > :Collapse label=Rendering
 > >
-> > [Exercise 1](/docs/workshops/worshop3/exercise1)
+> > [Exercise 1](/docs/workshops/path_tracing)
 > > [Exercise 2](/docs/workshops/worshop3/exercise2)
+> > [Conclusions](/docs/workshops/worshop3/conclusions)
 >
 > > :Collapse label=Algovis
 > >

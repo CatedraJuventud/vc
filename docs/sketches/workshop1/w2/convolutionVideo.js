@@ -3,6 +3,10 @@ let lienzo;
 let contador=0;
 let reproduce = true;
 
+let maxFr=0;
+let frames=0;
+let i =0;
+
 const Blur_Kernel= [ [0.11, 0.11, 0.11],
 [0.11, 0.11, 0.11],
 [0.11, 0.11, 0.11]]; 
@@ -30,11 +34,27 @@ function setup() {
   button2.position(290,225);
   button.mousePressed(changeMatrix);
   button2.mousePressed(pauseVideo);
-  frameRate(3);//solo 3 frames por segundo pues no contamos con gpu
+  // frameRate(3);//solo 3 frames por segundo pues no contamos con gpu
+  frameRate(120);
   noLoop()
 }
 
+function benchmark(f){
+  frames+=f;
+  maxFr=maxFr<f?f:maxFr;
+  i+=1;
+  if(i%100==0){
+    console.log("max"+maxFr);
+    console.log("avg:"+frames/i);
+    i=0;
+    frames=0;
+  }
+}
+
+
 function draw() {
+  let f=frameRate()
+benchmark(f)
   background(0);
   lienzo.loadPixels();//en lienzo pintamos imagen convolucionada
   fingers.loadPixels();
