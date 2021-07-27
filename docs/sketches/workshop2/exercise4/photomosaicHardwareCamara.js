@@ -3,11 +3,13 @@ let symbol1;
 let myImage;
 let debug;
 let slider;
+let slider2;
 const WIDTH_PIXEL = 64;
 const HEIGHT_PIXEL = 64;
 const NUM_IMAGES = 70;
 function preload() {
-  myImage = loadImage("/vc/docs/sketches/images/mandrill.png");
+  myImage = createCapture(VIDEO);
+  myImage.hide();
   symbol1 = loadImage("/vc/docs/sketches/images/concat_dataset.jpg");
   mosaic = loadShader(
     "/vc/docs/sketches/shaders/shader.vert",
@@ -16,14 +18,18 @@ function preload() {
 }
 
 function setup() {
-  slider = createSlider(1, 6, 4,1);
-  slider.position(10, 10);
+  slider = createSlider(1, 9, 1,1);
+  slider.position(10, 30);
   slider.style('width', '100px');
+  slider2 = createSlider(0,5,3,1);
+  slider2.position(10,10);
+  slider2.style('width', '100px');
   createCanvas(600, 600, WEBGL);
   textureMode(NORMAL);
   noStroke();
   shader(mosaic);
   mosaic.setUniform("image", myImage);
+  mosaic.setUniform("resolution", slider.value());
   mosaic.setUniform("WIDTH_PIXEL", WIDTH_PIXEL);
   mosaic.setUniform("NUM_IMAGES", NUM_IMAGES);
   mosaic.setUniform("HEIGHT_PIXEL", HEIGHT_PIXEL);
@@ -34,8 +40,8 @@ function setup() {
 }
 
 function draw() {
-  mosaic.setUniform("resolution", Math.pow(10,slider.value()));
-
+  const pow = Math.pow(10,slider2.value())
+  mosaic.setUniform("resolution", pow*slider.value());
   background(33);
   cover(true);
 }
