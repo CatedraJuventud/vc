@@ -46,13 +46,6 @@ function draw() {
   theShader.rect(0,0,256,256);
   rect(132,-256/2.0,256,256)
 
-
-
-
-
-
-  
-
 }
 
 function mousePressed() {
