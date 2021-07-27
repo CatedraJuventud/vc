@@ -1,7 +1,7 @@
 let original;
 
 function preload() {
-    const location = '/vc/docs/sketches/images/concat_dataset.jpg'
+    const location = '/vc/docs/sketches/images/Characters.jpg'
     original = loadImage(location);
 }
 

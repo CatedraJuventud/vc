@@ -186,3 +186,17 @@ The results and code can be seed above.
 > >  contador=(contador+1)%matrixCarrousel.length;
 > >  kernel=matrixCarrousel[contador];
 > >}
+
+## Reference
+Filter taking from:
+- https://en.wikipedia.org/wiki/Kernel_(image_processing)
+
+- https://docs.gimp.org/2.8/en/plug-in-convmatrix.html 
+
+- https://en.wikipedia.org/wiki/Image_embossing
+
+- https://learnopencv.com/photoshop-filters-in-opencv/
+
+- https://towardsdatascience.com/types-of-convolution-kernels-simplified-f040cb307c37
+
+- https://processing.org/tutorials/pshader/

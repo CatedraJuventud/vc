@@ -18,6 +18,7 @@
 > > > [Exercise 2](/docs/workshops/worshop2/exercise2)
 > > > [Exercise 3](/docs/workshops/worshop2/exercise3)
 > > > [Exercise 4](/docs/workshops/worshop2/exercise4)
+> > > [Conclusions](/docs/workshops/conclusionsw2)
 > 
 > > :Collapse label=Rendering
 > >
