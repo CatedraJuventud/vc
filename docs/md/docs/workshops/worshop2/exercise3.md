@@ -1,5 +1,10 @@
-# PhotoMosaic in Hardware
-## Processing the dataset
+# Ascii in Hardware
+## Problem Statement
+Image conversion to ascii art.
+
+## Background
+
+### Processing the dataset
 This implementation uses the list given by [Paul Bourke in Character representation of grey scale images](http://paulbourke.net/dataformats/asciiart/). The "Standard" character ramp for grey scale pictures, black -> white.
 
 > "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,"^`'. "
@@ -58,9 +63,9 @@ An image of 64x64 is created for each character. Then, the images are concatenat
 >>cv2.imwrite('Characters.jpg', img_w)
 > >```
 
-## Final Results
+### Final Results
 
-### Image
+#### Image
 > :Tabs
 > >:Tab title= Visualization
 > >
@@ -201,7 +206,7 @@ An image of 64x64 is created for each character. Then, the images are concatenat
 
 
 
-## Video
+### Video
 There are two sliders that allow configuring the resolution. The **First Slider** decide the pow(1,100,1.000,10.000,100.000).The **Second Slider** is a number from 1 to 10. This configuration lets the users visualize multiple resolutions that generate a variety of results   
 
 

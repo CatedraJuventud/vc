@@ -1,5 +1,22 @@
 # PhotoMosaic in Hardware
-## Processing the dataset
+## Problem Statement
+Converting the image to a photo mosaic
+
+## Background
+### Spatial Coherence
+
+Spatial coherence refers to a defined phase relationship between different points in a cross section of a light beam. Let us consider 2 points p1 and p2 that lie in the same beam cross section (surface perpendicular to the direction of propagation). If the phase difference between the electric fields of both points remains constant at any moment, it is said that between both points there is a perfect spatial coherence.
+
+
+For conventional light sources the coherence area is of the order of 0.0001 mm², while for lasers it is of the order of 1 mm². 
+
+The way to detect spatial coherence in a light beam is by Young's experiment.
+
+<p align="center">
+  <img width="700" height="500" src="/docs/sketches/images/young.png">
+</p>
+
+### Processing the dataset
 To make a scalable solution, the dataset is previously concatenated. The images are ordered by brightness, from lowest to the highest brightness. The implementation was developed in Python, code below:
 
 > :Tabs
@@ -45,9 +62,9 @@ To make a scalable solution, the dataset is previously concatenated. The images 
 > >cv2.imwrite('concat_dataset.jpg', img_w)
 > >```
 
-## Final Results
+### Final Results
 
-### Image
+#### Image
 > :Tabs
 > >:Tab title= Visualization
 > >
@@ -179,7 +196,7 @@ To make a scalable solution, the dataset is previously concatenated. The images 
 > >}
 > > ```
 >
-### Video
+#### Video
 There are two sliders that allow configuring the resolution. The **First Slider** decide the pow(1,100,1.000,10.000,100.000).The **Second Slider** is a number from 1 to 10. This configuration lets the users visualize multiple resolutions that generate a variety of results  
 
 
