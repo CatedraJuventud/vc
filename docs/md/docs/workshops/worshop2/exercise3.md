@@ -348,3 +348,6 @@ There are two sliders that allow configuring the resolution. The **First Slider*
 > >}
 > > ```
 >
+## References
+
+- [Paul Bourke in Character representation of grey scale images](http://paulbourke.net/dataformats/asciiart/)

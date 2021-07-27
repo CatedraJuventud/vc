@@ -332,3 +332,7 @@ There are two sliders that allow configuring the resolution. The **First Slider*
 > >}
 > > ```
 >
+## References
+
+ - [Spatial Coherence](https://es.wikipedia.org/wiki/Luz_coherente)
+ - [Young's Experiment](https://es.wikipedia.org/wiki/Experimento_de_Young)
