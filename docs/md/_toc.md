@@ -1,6 +1,6 @@
 [Home](/)
 
-> :Collapse label=Andres
+> :Collapse label=Andres Sanchez
 > 
 > > :Collapse label=Imaging & Video
 > >
