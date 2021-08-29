@@ -10,17 +10,40 @@ const NUM_IMAGES = 70;
 function preload() {
   myImages[0] = loadImage("/vc/docs/sketches/juventud/joven_guerra.jpg");
   myImages[1]= loadImage("/vc/docs/sketches/juventud/libertad.jpg")
+  myImages[2]=loadImage("/vc/docs/sketches/juventud/rural.jpg")
+  myImages[3]=loadImage("/vc/docs/sketches/juventud/culturas.jpg")
   symbol1 = loadImage("/vc/docs/sketches/images/concat_dataset.jpg");
   mosaic = loadShader(
     "/vc/docs/sketches/shaders/shader.vert",
     "/vc/docs/sketches/shaders/hardwarePhotomosaic.frag"
   );
 }
+function createButtons(){
+    button = createButton('>');
+    button.position(560, 250);
+    button.mousePressed(change);
+    button.style('padding:10px')
+    button.style('color:white')
+    button.style('background:black')
+    button.style('border-color:white')
+    button.style('font-size:1em')
+    
+  buttonGuerra=createButton("GUERRA");
+  buttonGuerra.position(110,560)
+  buttonGuerra.mousePressed(isGuerra);
+  buttonRural=createButton("RURALIDAD");
+  buttonRural.position(210,560)
+  buttonRural.mousePressed(isRural)
+  buttonLibertad=createButton("LIBERTAD");
+  buttonLibertad.position(320,560)
+  buttonLibertad.mousePressed(isLibertad)
+  buttonCultura=createButton("CULTURA");
+  buttonCultura.position(420,560)
+  buttonCultura.mousePressed(isCultura)
+}
 
 function setup() {
-button = createButton('>');
-  button.position(580, 300);
-  button.mousePressed(change);
+createButtons()
   slider = createSlider(1, 10, 1,1);
   slider.position(10, 10);
   slider.style('width', '100px');
@@ -36,6 +59,7 @@ button = createButton('>');
   mosaic.setUniform("debug", debug);
   let img = symbol1;
   mosaic.setUniform("symbol1", img);
+  frameRate(5)
 }
 
 function draw() {
@@ -78,7 +102,36 @@ function change(){
     slider = createSlider(1, 10, 1,1);
     slider.position(10, 10);
     slider.style('width', '100px');
-    button = createButton('>');
-  button.position(580, 300);
-  button.mousePressed(change);
+ createButtons()
+}
+
+function isGuerra(){
+    if(counter==0){
+        buttonGuerra.style('background', 'green');
+    }else{
+        buttonGuerra.style('background', 'red');
+    }
+
+}
+function isLibertad(){
+    if(counter==1){
+        buttonLibertad.style('background', 'green');
+    }else{
+        buttonLibertad.style('background', 'red');
+    }
+}
+function isRural(){
+    if(counter==2){
+        buttonRural.style('background', 'green');
+    }else{
+        buttonRural.style('background', 'red');
+    }
+}
+
+function isCultura(){
+    if(counter==3){
+        buttonCultura.style('background', 'green');
+    }else{
+        buttonCultura.style('background', 'red');
+    }
 }
