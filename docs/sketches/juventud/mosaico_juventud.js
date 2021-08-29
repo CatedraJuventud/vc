@@ -1,13 +1,15 @@
 let mosaic;
 let symbol1;
-let myImage;
+let myImages=[];
 let debug;
 let slider;
+let counter=0;
 const WIDTH_PIXEL = 64;
 const HEIGHT_PIXEL = 64;
 const NUM_IMAGES = 70;
 function preload() {
-  myImage = loadImage("/vc/docs/sketches/images/mandrill.png");
+  myImages[0] = loadImage("/vc/docs/sketches/juventud/joven_guerra.jpg");
+  myImages[1]= loadImage("/vc/docs/sketches/juventud/libertad.jpg")
   symbol1 = loadImage("/vc/docs/sketches/images/concat_dataset.jpg");
   mosaic = loadShader(
     "/vc/docs/sketches/shaders/shader.vert",
@@ -16,14 +18,17 @@ function preload() {
 }
 
 function setup() {
-  slider = createSlider(1, 6, 4,1);
+button = createButton('>');
+  button.position(580, 300);
+  button.mousePressed(change);
+  slider = createSlider(1, 10, 1,1);
   slider.position(10, 10);
   slider.style('width', '100px');
   createCanvas(600, 600, WEBGL);
   textureMode(NORMAL);
   noStroke();
   shader(mosaic);
-  mosaic.setUniform("image", myImage);
+  mosaic.setUniform("image", myImages[0]);
   mosaic.setUniform("WIDTH_PIXEL", WIDTH_PIXEL);
   mosaic.setUniform("NUM_IMAGES", NUM_IMAGES);
   mosaic.setUniform("HEIGHT_PIXEL", HEIGHT_PIXEL);
@@ -34,25 +39,29 @@ function setup() {
 }
 
 function draw() {
-  mosaic.setUniform("resolution", Math.pow(10,slider.value()));
-
+  mosaic.setUniform("resolution", Math.pow(2,slider.value()));
+  mosaic.setUniform("image", myImages[counter]);
   background(33);
   cover(true);
 }
-
+const scaw=1;
+const scah=0.7;
 function cover(texture = false) {
-  beginShape();
+  beginShape()
+  
+  let semiw=width*scaw;
+  let semih=height*scah;
   if (texture) {
     //texture(img);
-    vertex(-width / 2, -height / 2, 0, 0, 0);
-    vertex(width / 2, -height / 2, 0, 1, 0);
-    vertex(width / 2, height / 2, 0, 1, 1);
-    vertex(-width / 2, height / 2, 0, 0, 1);
+    vertex(-semiw / 2, -height / 2, 0, 0, 0);
+    vertex(semiw / 2, -height / 2, 0, 1, 0);
+    vertex(semiw / 2, semih / 2, 0, 1, 1);
+    vertex(-semiw / 2, semih / 2, 0, 0, 1);
   } else {
-    vertex(-width / 2, -height / 2, 0);
-    vertex(width / 2, -height / 2, 0);
-    vertex(width / 2, height / 2, 0);
-    vertex(-width / 2, height / 2, 0);
+    vertex(-semiw / 2, -height / 2, 0);
+    vertex(semiw / 2, -height / 2, 0);
+    vertex(semiw / 2, semih / 2, 0);
+    vertex(-semiw / 2, semih / 2, 0);
   }
   endShape(CLOSE);
 }
@@ -62,4 +71,14 @@ function keyPressed() {
     debug = !debug;
     mosaic.setUniform("debug", debug);
   }
+}
+function change(){
+    counter=(counter+1)%myImages.length
+    removeElements()
+    slider = createSlider(1, 10, 1,1);
+    slider.position(10, 10);
+    slider.style('width', '100px');
+    button = createButton('>');
+  button.position(580, 300);
+  button.mousePressed(change);
 }
