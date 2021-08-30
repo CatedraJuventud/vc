@@ -88,11 +88,6 @@
       "hash": "7H5M9Vp+I8cVV99ELLvnzg=="
     },
     {
-      "name": "CollapseControl",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/collapse/collapse-control.js",
-      "hash": "lqlJyab6eRMclBlk8Ftb8g=="
-    },
-    {
       "name": "GithubSearch",
       "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/misc/github/search.js",
       "hash": "MChpnTvN8BpuKyiMGzmSYw=="

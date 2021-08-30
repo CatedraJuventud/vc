@@ -16,7 +16,6 @@ import { postNavSearch } from '/home/runner/work/vc/vc/.codedoc/node_modules/@co
 import { copyLineLinks } from '/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/line-links/copy-line-link.js';copyLineLinks();
 import { gatherFootnotes } from '/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/footnote/gather-footnotes.js';gatherFootnotes();
 import { ToCPrevNext } from '/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/prevnext/index.js';
-import { CollapseControl } from '/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/collapse/collapse-control.js';
 import { GithubSearch } from '/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/misc/github/search.js';
 import { ToCToggle } from '/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/toggle/index.js';
 import { DarkModeSwitch } from '/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/darkmode/index.js';
@@ -25,7 +24,6 @@ import { TabSelector } from '/home/runner/work/vc/vc/.codedoc/node_modules/@code
 
 const components = {
   '7H5M9Vp+I8cVV99ELLvnzg==': ToCPrevNext,
-  'lqlJyab6eRMclBlk8Ftb8g==': CollapseControl,
   'MChpnTvN8BpuKyiMGzmSYw==': GithubSearch,
   'X5W7He+ge/Kg3B6xB+T5gg==': ToCToggle,
   '3ehN2Qj7wHC4donAKEDe0Q==': DarkModeSwitch,
